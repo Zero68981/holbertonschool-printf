@@ -1,14 +1,12 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-int _printf(const char *format, ...);
-int _putchar(char c);
-int print_char(va_list args);
-int print_string(va_list args);
-int print_percent(va_list args);
-
-#endif /* MAIN_H */
+/**
+ * _putchar - writes a character to stdout
+ * @c: the character
+ *
+ * Return: 1 on success, -1 on error
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
